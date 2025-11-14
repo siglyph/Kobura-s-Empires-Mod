@@ -1,5 +1,6 @@
 package net.kobura.koburasempires.entity;
 
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.kobura.koburasempires.KoburasEmpiresMod;
 import net.kobura.koburasempires.entity.custom.BanditEntity;
 import net.minecraft.entity.Entity;
@@ -16,5 +17,6 @@ public class ModEntities {
 
     public static void registerModEntities() {
         KoburasEmpiresMod.LOGGER.info("Registering Mod Entities for " + KoburasEmpiresMod.MOD_ID);
+        FabricDefaultAttributeRegistry.register(BANDIT, BanditEntity.createBanditAttributes());
     }
 }
