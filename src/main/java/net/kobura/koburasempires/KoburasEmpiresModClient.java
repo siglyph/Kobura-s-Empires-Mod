@@ -15,6 +15,6 @@ public class KoburasEmpiresModClient implements ClientModInitializer {
 
         EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.BANDIT, BanditModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.BANDIT, BanditRenderer::new);
-        ModEntityModelLayers.registerModelLayers();
+
     }
 }

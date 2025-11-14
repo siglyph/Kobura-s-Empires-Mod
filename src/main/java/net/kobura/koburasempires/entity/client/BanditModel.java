@@ -17,6 +17,7 @@ public class BanditModel extends SinglePartEntityModel<BanditEntity> {
     private ModelPart LeftLeg;
 
     public BanditModel(ModelPart part) {
+        this.Body = part;
     }
 
     public void set (ModelPart root) {
