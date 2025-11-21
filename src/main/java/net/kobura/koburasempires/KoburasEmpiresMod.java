@@ -2,6 +2,7 @@ package net.kobura.koburasempires;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.kobura.koburasempires.block.ModBlocks;
 import net.kobura.koburasempires.entity.ModEntities;
 import net.kobura.koburasempires.item.ModItemGroups;
 import net.kobura.koburasempires.item.ModItems;
@@ -20,6 +21,7 @@ public class KoburasEmpiresMod implements ModInitializer {
 	public void onInitialize() {
 		ModItems.registerModItems();
         ModItemGroups.registerItemGroups();
+        ModBlocks.registerModBlocks();
         ModEntities.registerModEntities();
 
 		LOGGER.info("Hello Fabric world!");

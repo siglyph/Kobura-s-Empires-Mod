@@ -24,12 +24,13 @@ public class BanditEntity extends PathAwareEntity {
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 1);
     }
 
+
     @Override
     protected void initGoals() {
         super.initGoals();
         this.goalSelector.add(0, new SwimGoal(this));
         this.goalSelector.add(8, new WanderAroundGoal(this, 0.6));
-        this.goalSelector.add(9, new LookAtEntityGoal(this, PlayerEntity.class, 15.0F, 1.0F));
+        this.goalSelector.add(9, new LookAtEntityGoal(this, PlayerEntity.class,15.0F, 1.0F));
         this.goalSelector.add(10, new LookAtEntityGoal(this, MobEntity.class, 15.0F));
         this.targetSelector.add(1, new RevengeGoal(this, RaiderEntity.class).setGroupRevenge());
         this.targetSelector.add(2, new ActiveTargetGoal(this, PlayerEntity.class, true));
