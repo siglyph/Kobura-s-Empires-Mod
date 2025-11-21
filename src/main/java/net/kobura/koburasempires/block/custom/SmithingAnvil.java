@@ -16,11 +16,19 @@ public class SmithingAnvil extends Block {
         super(settings);
     }
 
+
+    // Play sound on right click
     @Override
     protected ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, BlockHitResult hit) {
 
-        world.playSound(player, pos, SoundEvents.BLOCK_ANVIL_USE, SoundCategory.BLOCKS, 1.0F, 1.0F);
+        if (world.isDay()){
+            world.playSound(player, pos, SoundEvents.BLOCK_ANVIL_PLACE, SoundCategory.BLOCKS, 10.0F, 1.0F);
+        }
+        else {
+            world.playSound(player, pos, SoundEvents.ENTITY_CAT_PURR, SoundCategory.NEUTRAL, 10.0F, 1.0F);
+        }
 
-        return super.onUse(state, world, pos, player, hit);
+
+        return ActionResult.SUCCESS;
     }
 }

@@ -1,6 +1,7 @@
 package net.kobura.koburasempires.block;
 
 import net.kobura.koburasempires.KoburasEmpiresMod;
+import net.kobura.koburasempires.block.custom.SmithingAnvil;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
@@ -13,10 +14,10 @@ import net.minecraft.util.Identifier;
 
 public class ModBlocks {
     public static final Block STEEL_BLOCK = registerBlock("steel_block", new Block(AbstractBlock.Settings.create()
-            .sounds(BlockSoundGroup.NETHERITE)
-            .strength(5f)
-            .requiresTool()
-    ));
+            .sounds(BlockSoundGroup.NETHERITE).strength(5f).requiresTool()));
+
+    public static final Block SMITHING_ANVIL = registerBlock("smithing_anvil", new SmithingAnvil(AbstractBlock.Settings.create()
+            .strength(5f).requiresTool()));
 
     private static Block registerBlock(String name, Block block){
         registerBlockItem(name, block);

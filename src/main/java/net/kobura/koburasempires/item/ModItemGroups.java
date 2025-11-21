@@ -19,6 +19,7 @@ public class ModItemGroups {
                     .icon(() -> new ItemStack(ModItems.STEEL_INGOT)).entries((displayContext, entries) -> {
                         entries.add(ModItems.STEEL_INGOT);
                         entries.add(ModBlocks.STEEL_BLOCK);
+                        entries.add(ModBlocks.SMITHING_ANVIL);
                     }).build());
 
 
